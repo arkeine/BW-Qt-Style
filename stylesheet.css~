@@ -1,0 +1,569 @@
+/* 
+ * A lot of informations about syntaxe and/or
+ * selector were found  on the qt 
+ * documentation online and on this site :
+ *
+ * http://qt.developpez.com/doc/4.7/exemples-feuilles-style/
+ * http://qt.developpez.com/doc/4.6/stylesheet-reference/
+ * 
+ */
+ 
+/*============================================*/
+/*  GLOBAL SETTINGS
+/*============================================*/
+
+/*BASE STYLE*/
+QWidget{
+	background-color: black;
+	color: white;
+    selection-color: black;
+	selection-background-color: white;
+	font: 14px;
+	padding: 2px;
+	outline: 0;
+}
+
+/*BASE DISABLED STYLE*/
+QWidget:disabled,
+QGroupBox::title:disabled,
+QScrollBar::add-line:disabled,
+QScrollBar::sub-line:disabled,
+QScrollBar::handle:disabled{
+	border-color: #4A4A4A; /*darker gray*/
+	color: #4A4A4A; /*darker gray*/
+}
+
+/*BORDER STYLE*/
+QAbstractButton, /*All buttons*/
+QAbstractSpinBox, /*All spinbox*/
+QComboBox,
+QListView,
+QTextEdit,
+QPlainTextEdit,
+QGroupBox,
+QGroupBox::title,
+QScrollBar,
+QScrollBar::add-line,
+QScrollBar::sub-line,
+QProgressBar::chunk,
+QLineEdit,
+QProgressBar {
+	padding: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;
+	border-color: white;
+}
+
+/*============================================*/
+/*  FOCUSABLE COMPONENTS
+/*============================================*/
+
+/*FULL NEGATIVE STYLE*/
+QAbstractButton:focus, /*All buttons*/
+QAbstractSpinBox:focus, /*All spinbox*/
+QComboBox:focus,
+QGroupBox::title:focus,
+QLineEdit:focus{
+	background-color: white;
+	color: black;
+}
+
+/*EMPHASIS BORDER STYLE*/
+QGroupBox:focus,
+QTextEdit:focus,
+QPlainTextEdit:focus{
+	border-width: 5px;
+}
+
+QWidget:hover,
+QScrollBar::handle:hover,
+QScrollBar::sub-line:hover ,
+QScrollBar::add-line:hover  {
+	border-color: #3366FF; /*electro blue*/
+}
+
+/*============================================*/
+/*  CLICKABLE COMPONENTS
+/*============================================*/
+
+QAbstractButton:pressed,  /*All buttons*/
+QLineEdit:pressed,
+QScrollBar::sub-line:pressed,
+QScrollBar::add-line:pressed,
+QScrollBar::handle:pressed{
+	background-color: #3366FF; /*electro blue*/
+	border-color: white;
+	color: white;
+}
+
+/*============================================*/
+/*  CHECKABLE COMPONENTS
+/*============================================*/
+
+QWidget::indicator:checked {
+	image: url(:/resources/checkbox/checkbox-check-white.svg);
+}
+
+QWidget::indicator:unchecked{
+	image: url(:/resources/checkbox/checkbox-uncheck-white.svg);
+}
+
+/*FOCUS*/
+QWidget::indicator:checked:focus  {
+	image: url(:/resources/checkbox/checkbox-check-black.svg);
+}
+
+QWidget::indicator:unchecked:focus {
+	image: url(:/resources/checkbox/checkbox-uncheck-black.svg);
+}
+
+/*DISABLE*/
+QWidget::indicator:checked:disabled {
+	image: url(:/resources/checkbox/checkbox-check-darkgray.svg);
+}
+
+QWidget::indicator:unchecked:disabled {
+	image: url(:/resources/checkbox/checkbox-uncheck-darkgray.svg);
+}
+
+/*PRESSED*/
+QWidget::indicator:checked:pressed  {
+	image: url(:/resources/checkbox/checkbox-check-white.svg);
+}
+
+QWidget::indicator:unchecked:pressed {
+	image: url(:/resources/checkbox/checkbox-uncheck-white.svg);
+}
+
+/*
+ * All the following properties are define for 
+ * custom components or groups of very similar
+ * components.
+ */
+
+/*============================================*/
+/*  SPINBOX
+/*============================================*/
+
+QAbstractSpinBox{
+    selection-color: white;
+	selection-background-color: black;
+}
+
+QAbstractSpinBox:pressed{
+	background-color: #3366FF;
+	border-color: white;
+}
+
+QAbstractSpinBox::up-button{
+	border-image: url(:/resources/arrows/up/arrow-white.svg);
+	margin: 2px;
+}
+
+QAbstractSpinBox::down-button{
+	border-image: url(:/resources/arrows/down/arrow-white.svg);
+	margin: 2px;
+}
+
+/*FOCUS*/
+QAbstractSpinBox::up-button:focus{
+	border-image: url(:/resources/arrows/up/arrow-black.svg);
+	margin: 2px;
+}
+
+QAbstractSpinBox::down-button:focus{
+	border-image: url(:/resources/arrows/down/arrow-black.svg);
+	margin: 2px;
+}
+
+/*DISABLE*/
+QAbstractSpinBox::up-button:disabled{
+	border-image: url(:/resources/arrows/up/arrow-darkgray.svg);
+	margin: 2px;
+}
+
+QAbstractSpinBox::down-button:disabled{
+	border-image: url(:/resources/arrows/down/arrow-darkgray.svg);
+	margin: 2px;
+}
+
+/*PRESSED*/
+QAbstractSpinBox::up-button:pressed{
+	border-image: url(:/resources/arrows/up/arrow-white.svg);
+	margin: 2px;
+}
+
+QAbstractSpinBox::down-button:pressed{
+	border-image: url(:/resources/arrows/down/arrow-white.svg);
+	margin: 2px;
+}
+
+/*============================================*/
+/*  RICHTEXT COMPONENTS
+/*============================================*/
+
+QTextEdit,
+QPlainTextEdit{
+	selection-color: black;
+	selection-background-color: white;
+}
+
+/*============================================*/
+/*  COMBOBOX
+/*============================================*/
+
+/*POPUP OPEN*/
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+	background-color: #3366FF; /*electro blue*/
+	border-color: white;
+	color: white;
+}
+
+QComboBox::drop-down {
+	border-style: none;
+}
+
+QComboBox::down-arrow {
+	border-image: url(:/resources/arrows/down/arrow-white.svg);
+}
+
+QComboBox::down-arrow:focus {
+	border-image: url(:/resources/arrows/down/arrow-black.svg);
+}
+
+QComboBox::down-arrow:disabled {
+	border-image: url(:/resources/arrows/down/arrow-darkgray.svg);
+}
+
+QComboBox::item{
+	background: black ;
+	color: white;	
+}
+
+QComboBox::item:selected{
+	background: #3366FF; /*electro blue*/
+	color: white;	
+}
+
+QComboBox QAbstractItemView{
+	background-color: black;
+	color: white;
+    selection-color: white;
+	selection-background-color: #3366FF; /*electro blue*/
+}
+
+/*============================================*/
+/*  RADIOBUTTON
+/*============================================*/
+
+QRadioButton::indicator:checked {
+	image: url(:/resources/radiobutton/radiobutton-check-white.svg);
+}
+
+QRadioButton::indicator:unchecked{
+	image: url(:/resources/radiobutton/radiobutton-uncheck-white.svg);
+}
+
+/*FOCUS*/
+QRadioButton::indicator:checked:focus  {
+	image: url(:/resources/radiobutton/radiobutton-check-black.svg);
+}
+
+QRadioButton::indicator:unchecked:focus {
+	image: url(:/resources/radiobutton/radiobutton-uncheck-black.svg);
+}
+
+/*DISABLE*/
+QRadioButton::indicator:checked:disabled {
+	image: url(:/resources/radiobutton/radiobutton-check-darkgray.svg);
+}
+
+QRadioButton::indicator:unchecked:disabled {
+	image: url(:/resources/radiobutton/radiobutton-uncheck-darkgray.svg);
+}
+
+/*PRESSED*/
+QRadioButton::indicator:checked:pressed  {
+	image: url(:/resources/radiobutton/radiobutton-check-white.svg);
+}
+
+QRadioButton::indicator:unchecked:pressed {
+	image: url(:/resources/radiobutton/radiobutton-uncheck-white.svg);
+}
+
+/*============================================*/
+/*  GROUPBOX
+/*============================================*/
+
+QGroupBox {
+	margin-top: 20px;
+}
+
+QGroupBox:hover {
+	border-color: white;
+}
+
+QGroupBox:pressed {
+	background-color: black;
+	color: black; 
+}
+
+QGroupBox::title {
+	subcontrol-origin: margin;
+	subcontrol-position: top center;
+}
+
+/*PRESSED*/
+QGroupBox::indicator:checked:pressed  {
+	image: url(:/resources/checkbox/checkbox-check-blue.svg);
+}
+
+QGroupBox::indicator:unchecked:pressed {
+	image: url(:/resources/checkbox/checkbox-uncheck-blue.svg);
+}
+
+/*HOVER*/
+QGroupBox::indicator:checked:hover  {
+	image: url(:/resources/checkbox/checkbox-check-blue.svg);
+}
+
+QGroupBox::indicator:unchecked:hover {
+	image: url(:/resources/checkbox/checkbox-uncheck-blue.svg);
+}
+
+
+/*============================================*/
+/*  LISTVIEW
+/*============================================*/
+
+QListView:hover {
+	border-color: white;
+}
+
+QListView {
+	padding: 0px;
+}
+
+QListView::item:alternate {
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: white;
+	border-width: 1px;
+	background: black;
+	color: white;
+}
+
+QListView::item:alternate:disabled {
+	border-color: #4A4A4A; /*darker gray*/
+	color: #4A4A4A; /*darker gray*/
+}
+
+QListView::item:selected {
+	background: white ;
+	color: black;
+}
+
+QListView::item:selected:disabled {
+	background: #4A4A4A; /*darker gray*/
+	color: black;
+}
+
+QListView::item:selected:hover ,
+QListView::item:hover {
+	/*The border just out above the border for the first item*/
+	background: #3366FF; /*electro blue*/
+	color: white;
+}
+
+/*============================================*/
+/*  SCROLLBAR
+/*============================================*/
+
+QScrollBar:horizontal {
+	padding: 0;
+	border-color: black;
+	border-image: url(:/resources/scrollbar/horizontal-line-white.svg);
+	margin: 0px 22px 0px 22px;
+}
+
+QScrollBar:vertical {
+	padding: 0;
+	border-color: black;
+	border-image: url(:/resources/scrollbar/vertical-line-white.svg);
+	margin: 22px 0px 22px 0px;
+}
+
+QScrollBar::handle {
+	border-style: solid;
+	border-width: 2%;
+	border-color: white;
+	border-radius: 5px;
+	background-color: black;
+}
+
+QScrollBar::handle:horizontal {
+	min-width: 20px;
+}
+
+QScrollBar::handle:vertical {
+	min-height: 20px;
+}
+
+QScrollBar::add-line:horizontal {
+	padding: 0;
+	width: 20px;
+	border-radius: 5px;
+	subcontrol-position: right;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical {
+	padding: 0;
+	height: 20px;
+	border-radius: 5px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+	padding: 0;
+	width: 20px;
+	border-radius: 5px;
+	subcontrol-position: left;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+	padding: 0;
+	height: 20px;
+	border-radius: 5px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::right-arrow:horizontal {
+	width: 10px;
+	height: 10px;
+	image: url(:/resources/arrows/right/arrow-white.svg);
+}
+
+QScrollBar:left-arrow:horizontal {
+	width: 10px;
+	height: 10px;
+	image: url(:/resources/arrows/left/arrow-white.svg);
+}
+
+QScrollBar:up-arrow:vertical {
+	width: 10px;
+	height: 10px;
+	image: url(:/resources/arrows/up/arrow-white.svg);
+}
+
+QScrollBar:down-arrow:vertical {
+	width: 10px;
+	height: 10px;
+	image: url(:/resources/arrows/down/arrow-white.svg);
+}
+
+/*DISABLE*/
+
+QScrollBar:horizontal:disabled {
+	border-image: url(:/resources/scrollbar/horizontal-line-darkgray.svg);
+}
+
+QScrollBar:vertical:disabled {
+	border-image: url(:/resources/scrollbar/vertical-line-darkgray.svg);
+}
+
+QScrollBar::right-arrow:horizontal:disabled {
+	image: url(:/resources/arrows/right/arrow-darkgray.svg);
+}
+
+QScrollBar:left-arrow:horizontal:disabled {
+	image: url(:/resources/arrows/left/arrow-darkgray.svg);
+}
+
+QScrollBar:up-arrow:vertical:disabled {
+	image: url(:/resources/arrows/up/arrow-darkgray.svg);
+}
+
+QScrollBar:down-arrow:vertical:disabled {
+	image: url(:/resources/arrows/down/arrow-darkgray.svg);
+}
+
+/*============================================*/
+/*  PROGRESSBAR
+/*============================================*/
+
+QProgressBar {
+	text-align: center;
+}
+
+QProgressBar:horizontal:hover {
+	border-color: white;
+}
+
+QProgressBar:vertical:hover {
+	border-color: white;
+}
+
+QProgressBar::chunk {
+	background: #3366FF; /*electro blue*/
+	border-color: #3366FF; /*electro blue*/
+}
+
+QProgressBar::chunk:disable {
+	background: #4A4A4A; /*electro blue*/
+	border-color: #4A4A4A; /*electro blue*/
+}
+
+/*============================================*/
+/*  HEADERVIEW
+/*============================================*/
+
+QHeaderView::section {
+	padding : 1px;
+}
+
+QHeaderView::section {
+	height: 40px;
+	width:110%;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	border-radius: 5px;
+	background: black;
+	color: white;
+}
+ 
+ QHeaderView::section:checked
+ {
+	background: white;
+	color: black;
+ }
+
+
+/*============================================*/
+/*  HEADERVIEW
+/*============================================*/
+
+QTableView {
+	
+}
+ 
+QTableView QTableCornerButton::section {
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	border-radius: 5px;
+	background: black;
+	color: white;
+ }
+
+
+/*============================================*/
+/*  ARROWS COMPONENTS
+/*============================================*/
+	
+

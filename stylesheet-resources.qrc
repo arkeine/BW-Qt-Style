@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>arrows/down/arrow-black.svg</file>
+        <file>arrows/down/arrow-blue.svg</file>
+        <file>arrows/down/arrow-darkgray.svg</file>
+        <file>arrows/down/arrow-white.svg</file>
+        <file>arrows/left/arrow-black.svg</file>
+        <file>arrows/left/arrow-blue.svg</file>
+        <file>arrows/left/arrow-darkgray.svg</file>
+        <file>arrows/left/arrow-white.svg</file>
+        <file>arrows/right/arrow-black.svg</file>
+        <file>arrows/right/arrow-blue.svg</file>
+        <file>arrows/right/arrow-darkgray.svg</file>
+        <file>arrows/right/arrow-white.svg</file>
+        <file>arrows/up/arrow-black.svg</file>
+        <file>arrows/up/arrow-blue.svg</file>
+        <file>arrows/up/arrow-darkgray.svg</file>
+        <file>arrows/up/arrow-white.svg</file>
+        <file>checkbox/checkbox-check-black.svg</file>
+        <file>checkbox/checkbox-check-blue.svg</file>
+        <file>checkbox/checkbox-check-darkgray.svg</file>
+        <file>checkbox/checkbox-check-white.svg</file>
+        <file>checkbox/checkbox-uncheck-black.svg</file>
+        <file>checkbox/checkbox-uncheck-blue.svg</file>
+        <file>checkbox/checkbox-uncheck-darkgray.svg</file>
+        <file>checkbox/checkbox-uncheck-white.svg</file>
+        <file>radiobutton/radiobutton-check-black.svg</file>
+        <file>radiobutton/radiobutton-check-blue.svg</file>
+        <file>radiobutton/radiobutton-check-darkgray.svg</file>
+        <file>radiobutton/radiobutton-check-white.svg</file>
+        <file>radiobutton/radiobutton-uncheck-black.svg</file>
+        <file>radiobutton/radiobutton-uncheck-blue.svg</file>
+        <file>radiobutton/radiobutton-uncheck-darkgray.svg</file>
+        <file>radiobutton/radiobutton-uncheck-white.svg</file>
+        <file>scrollbar/horizontal-line-darkgray.svg</file>
+        <file>scrollbar/horizontal-line-white.svg</file>
+        <file>scrollbar/vertical-line-darkgray.svg</file>
+        <file>scrollbar/vertical-line-white.svg</file>
+        <file>stylesheet.css</file>
+    </qresource>
+</RCC>

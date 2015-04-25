@@ -4,7 +4,7 @@ Qt-application CSS stylesheet whit the following features:
 - Flat and round design
 - User interaction highlighted in blue style
 
-The component currently supported are listed in the wiki. Furthermore there are screenshots of some components.
+The component currently supported are listed in the wiki. Furthermore, there are screenshots of some components.
 
 
 
